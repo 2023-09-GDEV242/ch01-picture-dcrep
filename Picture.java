@@ -37,39 +37,39 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
             wall.changeSize(120);
             wall.makeVisible();
+            wall.slowMoveHorizontal(-140);
+            wall.slowMoveVertical(20);
             
             door.changeColor("blue");
-            door.moveHorizontal(-70);
-            door.moveVertical(105);
             door.changeSize(35);
             door.makeVisible();
+            door.slowMoveHorizontal(-70);
+            door.slowMoveVertical(105);            
             
             window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
             window.changeSize(30);
             window.makeVisible();
+            window.slowMoveHorizontal(-120);
+            window.slowMoveVertical(40);            
     
             roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
             roof.makeVisible();
-    
+            roof.slowMoveHorizontal(20);
+            roof.slowMoveVertical(-60);
+            
             sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
             sun.changeSize(80);
             sun.makeVisible();
+            sun.slowMoveHorizontal(100);
+            sun.slowMoveVertical(-40);            
             
             personA.changeColor("orange");
-            personA.moveHorizontal(-50);
-            personA.moveVertical(60);
             personA.changeSize(60,30);
             personA.makeVisible();
+            personA.slowMoveHorizontal(-50);
+            personA.slowMoveVertical(60);
             
             drawn = true;
         }
