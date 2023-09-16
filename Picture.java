@@ -5,7 +5,7 @@
  * 
  * @author  Daniel Corritore
  *          (modified from code by Michael Kšlling and David J. Barnes)
- * @version 2023.09.12
+ * @version 2023.09.15
  */
 public class Picture
 {
