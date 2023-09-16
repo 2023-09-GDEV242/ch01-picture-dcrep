@@ -10,6 +10,7 @@ import java.util.*;
  *
  * @author: Bruce Quig
  * @author: Michael Kšlling (mik)
+ * @author: Daniel Corritore (added switch statement for setForegroundColor)
  *
  * @version 2016.02.29
  */
@@ -122,30 +123,62 @@ public class Canvas
      */
     public void setForegroundColor(String colorString)
     {
+        // Set color using simple switch statement
+        switch(colorString.toLowerCase()) {
+            case "red":
+                graphic.setColor(new Color(235, 25, 25));
+                break;
+            case "green":
+                graphic.setColor(new Color(80, 160, 60));
+                break;
+            case "blue":
+                graphic.setColor(new Color(30, 75, 220));
+                break;                
+            case "yellow":
+                graphic.setColor(new Color(255, 230, 0));
+                break;
+            case "cyan":
+                graphic.setColor(Color.cyan);
+                break;
+            case "magenta":
+                graphic.setColor(Color.magenta);
+                break;                
+            case "white":
+                graphic.setColor(Color.white);
+                break;
+            case "orange":
+                graphic.setColor(Color.orange);
+                break;
+            case "lightgray":
+                graphic.setColor(Color.lightGray);
+                break;
+            case "darkgray":
+                graphic.setColor(Color.darkGray);
+                break;
+            case "black":
+            default:
+                graphic.setColor(Color.black);
+        }
+/*      Outdated ugly original format:
         if(colorString.equals("red")) {
-            graphic.setColor(new Color(235, 25, 25));
         }
         else if(colorString.equals("black")) {
-            graphic.setColor(Color.black);
         }
         else if(colorString.equals("blue")) {
-            graphic.setColor(new Color(30, 75, 220));
         }
         else if(colorString.equals("yellow")) {
-            graphic.setColor(new Color(255, 230, 0));
         }
         else if(colorString.equals("green")) {
-            graphic.setColor(new Color(80, 160, 60));
         }
         else if(colorString.equals("magenta")) {
-            graphic.setColor(Color.magenta);
         }
         else if(colorString.equals("white")) {
-            graphic.setColor(Color.white);
+        }
+        else if(colorString.equals("orange")) {
         }
         else {
-            graphic.setColor(Color.black);
         }
+*/
     }
 
     /**
